@@ -20,7 +20,6 @@ router.get('/insert', function (req, res, next) {
       collection.find({}).toArray(function (err, docs) {
         res.render("member", { 'CA': docs[0].CA });
       })
-
     }
   })
     ;
