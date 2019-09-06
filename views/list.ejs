@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>select</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h2>멤버목록</h2>
+  <a href="/member/insert">멤버등록</a>
+
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>PW</th>
+        <th>NAME</th>
+        <th>ADDRESS</th>
+        <th>AGE</th>
+        <th>ACOUNT</th>
+        <th>CA</th>
+        <th>EDIT</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <% for(var i =0; i<list.length; i++) {%>
+      <tr>
+        <td><%=list[i].id%></td>
+        <td><%=list[i].pw%></td>
+        <td><%=list[i].name%></td>
+        <td><%=list[i].addr%></td>
+        <td><%=list[i].age%></td>
+        <td><%=list[i].acount%></td>
+        <td><%=list[i].ca%></td>
+
+
+        <td>
+          <a href="/member/remove?id=<%=list[i].id%>">삭제</a>
+          <a href="/member/update?id=<%=list[i].id%>">수정</a>
+        </td>
+      </tr>
+      
+      <%}%>
+    </tbody>
+  </table>
+</body>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</html>

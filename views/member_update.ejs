@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>select</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h2>멤버목록</h2>
+  <a href="/member/insert">멤버등록</a>
+
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>PW</th>
+        <th>NAME</th>
+        <th>ADDRESS</th>
+        <th>AGE</th>
+        <th>EDIT</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <form action="/member/update" method="POST">
+      <% for(var i =0; i<list.length; i++) {%>
+      <tr>
+        <td><input type="text" name="id" value="<%=list[i].id%>"></td>
+        <td><input type="text" name="pw" value="<%=list[i].pw%>"></td>
+        <td><input type="text" name="name" value="<%=list[i].name%>"></td>
+        <td><input type="text" name="addr" value="<%=list[i].addr%>"></td>
+        <td><input type="text" name="age" value="<%=list[i].age%>"></td>
+        <td>
+          <input type="submit" value="수정하기">
+        </td>
+      </tr>
+      <%}%>
+    </form>
+    </tbody>
+  </table>
+</body>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</html>

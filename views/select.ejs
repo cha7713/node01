@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>select</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <a href="/mongo/insert">물품등록</a>
+
+
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>물품번호</th>
+        <th>물품명</th>
+        <th>물품가격</th>
+        <th>물품수량</th>
+        <th>편집</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(var i =0; i<list.length; i++) {%>
+      <tr>
+        <td><%=list[i].no%></td>
+        <td><%=list[i].name%></td>
+        <td><%=list[i].price%></td>
+        <td><%=list[i].cnt%></td>
+        <td>
+          <a href="/mongo/update?no=<%=list[i].no%>">수정</a>
+          <a href="/mongo/delete?no=<%=list[i].no%>">삭제</a>
+        </td>
+      </tr>
+      <%}%>
+    </tbody>
+  </table>
+</body>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</html>
