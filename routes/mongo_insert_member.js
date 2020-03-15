@@ -157,6 +157,7 @@ router.get('/list', function (req, res, next) {
       var collection = dbconn.db("item").collection('member1');
       //
       collection.find({}).toArray(function (err, docs) {
+        
         res.render('list', { list: docs })
       })
 
